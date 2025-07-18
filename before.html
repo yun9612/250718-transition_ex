@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소 선택자</title>
+    <style>
+      p {
+        background-color: antiquewhite;
+      }
+      .box {
+        background-color: red;
+      }
+      .box::before {
+        content: "🎈";
+        display: block;
+      }
+      .box::after {
+        content: "✨";
+        display: block;
+      }
+      .box2 {
+        background-color: aquamarine;
+      }
+      .box2::before {
+        content: "<before>";
+        color: red;
+        background-color: aliceblue;
+      }
+      .box2::after {
+        content: "<after>";
+        color: blue;
+        background-color: antiquewhite;
+        padding: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>✨✨</span>
+    <p>Lorem, ipsum dolor.</p>
+    <span>✨✨</span>
+    <p class="box">Lorem, ipsum dolor.</p>
+    <div class="box2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis minima
+      voluptas maxime accusamus, velit aut ea earum reiciendis dolores, nam
+      excepturi tempora placeat. Vitae perferendis non eveniet. Cupiditate, fuga
+      ipsa.
+    </div>
+  </body>
 </html>
